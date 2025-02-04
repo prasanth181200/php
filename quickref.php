@@ -7,7 +7,7 @@
     echo "\$hello=".$hello."\n";
     $hello .= " World!";
     echo "\$hello=".$hello."\n";
-    unset($hello);unset($url); //de-alocating used vars in this block
+    unset($hello, $url); //de-alocating used vars in this block
 
     echo "\n\n#basic var declaration\n";
     $num = [1,3,5,7,9]; // var declaretion
@@ -19,7 +19,7 @@
     $x = 1; $y = 2;
     $sum = $x + $y;
     echo "\$x=".$x.", \$y=".$y."; \$sum = \$x + \$y; sum = ".$sum."\n";
-    unset($x);unset($y);unset($sum); //de-alocating used vars in this block
+    unset($x, $y, $sum); //de-alocating used vars in this block
 
     echo "\n\n#include or importing";
     echo "\nimporting vars.php and store its return value in variable called \$vars .\n";
@@ -68,7 +68,7 @@
     echo "(boolean) 1; =".$bool3."\n";
     $bool4 = (boolean) 0; # false
     echo "(boolean) 0; =".$bool4."\n";
-    unset($bool1);unset($BOOL1);unset($bool2);unset($BOOL2);unset($bool3);unset($bool4); //de-alocating used vars in this block
+    unset($bool1, $BOOL1, $bool2, $BOOL2, $bool3, $bool4); //de-alocating used vars in this block
 
     echo "\n#integer\n";
     $int1 = 28;
@@ -83,5 +83,41 @@
     echo "binary int \$int5=".$int5."\n";
     $int6 = 2_000_100_000;
     echo "_ seperated int \$int6=".$int6."\n";
-    unset($int1);unset($int2);unset($int3);unset($int4);unset($int5);unset($int6); //de-alocating used vars in this block
+    unset($int1, $int2, $int3, $int4, $int5, $int6); //de-alocating used vars in this block
+
+    echo "\n#array\n";
+    $arr = array("hello", "world", "!");
+    echo '$arr  = array("hello", "world", "!")';
+    unset($arr); //de-alocating used vars in this block
+
+    echo "\n\n#float(double)\n";
+    $float1 = 1.234;
+    echo "\$float1=".$float1."\n";
+    $float2 = 1.2e7;
+    echo "\$float2=".$float2."\n";
+    $float3 = 7E-10;
+    echo "\$float3=".$float3."\n";
+    $float4 = 1_234.567;
+    echo "\$float=";
+    var_dump($float4);
+    $float5 = 1 + "10.5";
+    echo "\$float5=".$float5."\n";
+    $float6 = 1 + "-1.3e3";
+    echo "\$float6=".$float6."\n";
+    unset($float1, $float2, $float3, $float4, $float5, $float6); //de-alocating used vars in this block
+
+    echo "\n\n#null\n";
+    $a = null;
+    echo "\$a = null\n";
+    $b = "helo php!";
+    echo '$b = "'.$b.'"'."\n";
+    echo "\$a ?? ".'"somthing" ='; echo $a ?? '$a is null (or) unset'."\n";
+    echo "\$b ?? ".'"somthing" =';echo $b."\n" ?? '$b is null (or) unset'."\n";
+    $arr = array();
+    echo "\$arr is an empty array\n";
+    echo "\$arr == null :".($arr == null)."\n";
+    echo "\$arr === null :".($arr === null)."\n";
+    echo "is_null(\$arr)".is_null($arr)."\n";
+    echo "\$a === null :".($a === null)."\n";
+    echo "is_null(\$a) =".is_null($a)."\n";
 ?>
