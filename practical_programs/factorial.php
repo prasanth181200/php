@@ -13,18 +13,17 @@
         <input type="submit" value="Submit" name="submit" style="font-size: 2rem;">
     </form>
     <br>
-    <a href="/"><p style="text-align: left; font-size: 1.5rem;">return</p></a>
 </body>
 </html>
 <?php
-    $num = $_POST["number"];
-    
-    if ( $num ){
+    if (isset($_POST["number"]) && $_POST["number"] !== "" ){
+        $num = $_POST["number"];
         $result = 1;
         for ($i = $num ; $i >0; $i--){
             $result *= $i;
         };
         echo "factorial of $num = $result";
+    unset($num, $result);
     }
-    unset($num, $result)
+    echo '<a href="/"><p style="text-align: left; font-size: 1.5rem;">return</p></a>';
 ?>

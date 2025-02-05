@@ -38,7 +38,6 @@
         <br><input type="submit" value="Submit" name="submit" style="font-size: 2rem;">
     </form>
     <br>
-    <a href="/"><P style="text-align: left; font-size: 1.5rem;">return</p></a>
 </body>
 </html>
 
@@ -97,8 +96,9 @@
             echo "Hey $guest_name, here's a hearty Omnivore Platter with various delights!";
         }
     }else{
-        echo "Hey $guest_name, we have many other options for you! Let us know your preference!";
+        echo "<br>Hey $guest_name, we have many other options for you! Let us know your preference!";
     };
 
-    unset($name, $age, $preference, $favorite)
+    unset($name, $age, $preference, $favorite);
+    echo '<a href="/"><P style="text-align: left; font-size: 1.5rem;">return</p></a>';
 ?>

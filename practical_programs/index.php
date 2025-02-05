@@ -12,7 +12,7 @@
     <ol>
         <li style="font-size: x-large;"><a href="factorial.php"> Write a program to find the factorial of a number.</a></li>
         <li style="font-size: x-large;"><a href="conditions.php"> Write a program using Conditional Statements.</a></li>
-        <li style="font-size: x-large;"><a href="#"> Write a program to find the maximum value in a given multi dimensional array.</a></li>
+        <li style="font-size: x-large;"><a href="find_maximum.php"> Write a program to find the maximum value in a given multi dimensional array.</a></li>
         <li style="font-size: x-large;"><a href="#"> Write a program to find the GCD of two numbers using user-defined functions.</a></li>
         <li style="font-size: x-large;"><a href="#"> Design a simple web page to generate multiplivation table for a given number.</a></li>
         <li style="font-size: x-large;"><a href="#"> Design a web page that should compute one's age on a given date.</a></li>
