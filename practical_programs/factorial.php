@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Factorial</title>
 </head>
-<body>
+<body style="text-align: center; font-size:2rem;">
+    <h2>Factorial Program</h2>
     <form action="factorial.php" method="post">
-        <input type="number" name="number">
-        <input type="submit" value="Submit" name="submit">
+        <lable>Enter number</lable><br>
+        <input type="number" name="number" style="margin:10px 5px; padding:10px 5px;"><br>
+        <input type="submit" value="Submit" name="submit" style="font-size: 2rem;">
     </form>
+    <br>
+    <a href="/"><p style="text-align: left; font-size: 1.5rem;">return</p></a>
 </body>
 </html>
 <?php
